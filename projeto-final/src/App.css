@@ -1,8 +1,7 @@
-/* App.css */
 :root {
-  --primary: #0f172a;    /* Azul marinho profundo */
-  --accent: #3b82f6;     /* Azul brilhante */
-  --bg-page: #f1f5f9;    /* Cinza muito claro */
+  --primary: #0f172a;   
+  --accent: #3b82f6;    
+  --bg-page: #f1f5f9;    
   --white: #ffffff;
   --text-main: #1e293b;
   --text-muted: #64748b;
@@ -21,7 +20,6 @@ body {
   min-height: 100vh;
 }
 
-/* Header Moderno */
 .main-header {
   background-color: var(--primary);
   padding: 1.2rem 2rem;
@@ -46,7 +44,7 @@ body {
   letter-spacing: -1px;
 }
 
-.logo span { color: var(--accent); }
+.logo azul { color: var(--accent); }
 
 .nav-menu a {
   color: #94a3b8;
@@ -59,7 +57,7 @@ body {
 
 .nav-menu a:hover { color: var(--accent); }
 
-/* Footer Elegante */
+
 .main-footer {
   background-color: var(--primary);
   color: #94a3b8;

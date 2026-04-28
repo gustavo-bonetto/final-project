@@ -8,7 +8,6 @@ export default function Cadastro() {
   const [idEditando, setIdEditando] = useState(null);
   const [form, setForm] = useState({ nomep: "", preco: "", estoque: "", categoria: "" });
 
-  // 1. EFEITO PARA BUSCAR DADOS (Função dentro do useEffect resolve o erro da imagem)
   useEffect(() => {
     const carregarDados = async () => {
       try {
@@ -24,9 +23,8 @@ export default function Cadastro() {
     };
 
     carregarDados();
-  }, []); // Array vazio garante que só rode uma vez ao abrir a página
+  }, []); 
 
-  // 2. FUNÇÃO PARA SALVAR (POST/PUT)
   const handleSubmit = async (e) => {
     e.preventDefault();
     const metodo = idEditando ? "PUT" : "POST";
@@ -44,7 +42,6 @@ export default function Cadastro() {
         setForm({ nomep: "", preco: "", estoque: "", categoria: "" });
         setIdEditando(null);
         
-        // Recarregar a lista manualmente após salvar
         const atualizar = await fetch(API_URL);
         const novosDados = await atualizar.json();
         setProdutos(novosDados);
@@ -55,7 +52,7 @@ export default function Cadastro() {
     }
   };
 
-  // 3. FUNÇÃO PARA EXCLUIR
+  
   const excluir = async (id) => {
     if (window.confirm("Tem certeza que deseja excluir?")) {
       try {
@@ -73,7 +70,7 @@ export default function Cadastro() {
     <div className="container-projeto">
       <h1>Gestão de Produtos</h1>
 
-      {/* FORMULÁRIO COM SEU DESIGN */}
+     
       <form onSubmit={handleSubmit} className="cadastro-form">
         <input 
           placeholder="Nome" 
@@ -102,7 +99,6 @@ export default function Cadastro() {
         </button>
       </form>
 
-      {/* TABELA COM SEU DESIGN */}
       <div className="lista-section">
         {carregando ? <p>Buscando produtos...</p> : (
           <table className="tabela-estilo">
