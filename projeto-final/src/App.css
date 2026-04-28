@@ -1,0 +1,72 @@
+/* App.css */
+:root {
+  --primary: #0f172a;    /* Azul marinho profundo */
+  --accent: #3b82f6;     /* Azul brilhante */
+  --bg-page: #f1f5f9;    /* Cinza muito claro */
+  --white: #ffffff;
+  --text-main: #1e293b;
+  --text-muted: #64748b;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-page);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: var(--text-main);
+}
+
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header Moderno */
+.main-header {
+  background-color: var(--primary);
+  padding: 1.2rem 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--white);
+  letter-spacing: -1px;
+}
+
+.logo span { color: var(--accent); }
+
+.nav-menu a {
+  color: #94a3b8;
+  text-decoration: none;
+  margin-left: 2rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.nav-menu a:hover { color: var(--accent); }
+
+/* Footer Elegante */
+.main-footer {
+  background-color: var(--primary);
+  color: #94a3b8;
+  padding: 2.5rem 0;
+  text-align: center;
+  margin-top: auto;
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+.footer-content p { margin: 0.4rem 0; font-size: 0.85rem; }

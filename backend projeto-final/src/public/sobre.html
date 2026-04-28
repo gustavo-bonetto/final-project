@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nós - Sistema PRO</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .sobre-main { flex: 1; display: flex; justify-content: center; align-items: center; padding: 40px 20px; }
+        .glass-card { 
+            background: rgba(255, 255, 255, 0.1); 
+            max-width: 800px; padding: 50px; 
+            border-radius: 20px; backdrop-filter: blur(10px); 
+            text-align: center; border: 1px solid rgba(255,255,255,0.2);
+        }
+        .photo-container { width: 100%; margin: 30px 0; }
+        .mission-photo { max-width: 100%; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
+        .btn-voltar {
+            display: inline-block; padding: 15px 35px; color: #764ba2;
+            background: white; text-decoration: none; font-weight: bold;
+            border-radius: 50px; text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container-header">
+            <div class="header-info">
+                <h1>SISTEMA PRO</h1>
+                <p class="subtitle">Gerenciamento de estoque e produtos v1.0</p>
+            </div>
+            <nav class="header-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="cadastro.html">Produtos</a></li>
+                    <li><a href="sobre.html">Sobre nós</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="sobre-main">
+        <main class="glass-card">
+            <h2>Nossa Missão</h2>
+            <p>O Sistema PRO nasceu do grupo Men's Caves, no qual são um grupo do SENAI focados em fazer o que o professor manda, os cabeções de baixo desse texto são os integrantes do grupo.</p>
+            <div class="photo-container">
+                <img src="https://chatgpt.com/backend-api/estuary/public_content/enc/eyJpZCI6Im1fNjllZjc4NTRiNDQ4ODE5MWE1M2NjMzkxYjk2NTU5ZGI6ZmlsZV8wMDAwMDAwMGViZmM3MjBlYTcyMWIxYTAxYTg3YTExMCIsInRzIjoiMjA1NzAiLCJwIjoicHlpIiwiY2lkIjoiMSIsInNpZyI6ImFlNWUwY2RkNDAxNjg4ZTRhZDM0YmFjNmE2ZDU4M2QyNDg2NWVkOGRlNmU3MWI5Y2UwMmZjMzQxOGQ5ZWVjOTEiLCJ2IjoiMCIsImdpem1vX2lkIjpudWxsLCJjcyI6bnVsbCwiY2RuIjpudWxsLCJjcCI6bnVsbCwibWEiOm51bGx9" alt="Nossa Equipe" class="mission-photo">
+            </div>
+            <a href="index.html" class="btn-voltar">Voltar para Início</a>
+        </main>
+    </div>
+
+    <footer class="footer-geral">
+    <div class="container-footer">
+        <div class="footer-content">
+            <p>&copy; 2026 <strong>SISTEMA PRO</strong> </p>
+            <p class="footer-dev">Desenvolvido pelos Men's Caves</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

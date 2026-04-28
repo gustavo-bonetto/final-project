@@ -1,0 +1,214 @@
+/* Zerando padrões */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    min-height: 100vh; /* Mudado de height para min-height */
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Background com um degradê moderno */
+body {
+    display: flex;
+    flex-direction: column; /* Organiza Header no topo e Main embaixo */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+/* --- ESTILIZAÇÃO DO HEADER --- */
+header {
+    width: 100%;
+    padding: 20px 0;
+    background: rgba(0, 0, 0, 0.1); /* Fundo sutil para o header */
+}
+
+.container-header {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between; /* Título esquerda, Menu direita */
+    align-items: center;
+}
+
+.header-info {
+    text-align: left;
+}
+
+.header-info h1 {
+    font-size: 1.5rem; /* Tamanho menor para o header */
+    margin-bottom: 0;
+}
+
+.subtitle {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.header-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.header-nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.3s;
+}
+
+.header-nav a:hover {
+    opacity: 0.7;
+}
+
+/* --- CONTEÚDO PRINCIPAL (CENTRALIZADO) --- */
+.home-container {
+    flex: 1; /* Faz o container ocupar o resto da tela */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+}
+
+.home-container h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.home-container p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin-bottom: 40px;
+    font-weight: 300;
+}
+
+
+/* Bloco de vidro (Glassmorphism) */
+.glass-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 60px 80px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.glass-card h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.glass-card p {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+    opacity: 0.8;
+}
+
+/* Estilização do botão */
+.btn-cadastrar {
+    display: inline-block;
+    padding: 18px 45px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #764ba2;
+    background-color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.btn-cadastrar:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+    background-color: #f8f9fa;
+}
+
+/* ========================================
+   FOOTER GERAL PADRONIZADA
+   ======================================== */
+
+.footer-geral {
+    width: 100%;
+    padding: 30px 0;
+    background: rgba(0, 0, 0, 0.3); /* Fundo escuro sutil */
+    backdrop-filter: blur(5px);    /* Efeito de vidro */
+    color: white;
+    margin-top: auto;              /* Empurra para o fim em layouts flex */
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.container-footer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+    text-align: center;
+}
+
+.footer-content p {
+    font-size: 0.95rem;
+    margin: 5px 0;
+    opacity: 0.9;
+}
+
+.footer-dev {
+    font-size: 0.8rem !important;
+    opacity: 0.6 !important;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Garante que o body se comporte como coluna para a footer fixar embaixo */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Ajuste para telas menores */
+@media (max-width: 600px) {
+    .footer-geral {
+        padding: 20px 0;
+    }
+    .footer-content p {
+        font-size: 0.85rem;
+    }
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .container-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .glass-card {
+        padding: 40px 20px;
+        width: 90%;
+    }
+    
+    .glass-card h1 {
+        font-size: 2rem;
+    }
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+    .container-header {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .header-info { text-align: center; }
+    .search-box { flex-direction: column; }
+    .form-buttons { flex-direction: column; }
+}

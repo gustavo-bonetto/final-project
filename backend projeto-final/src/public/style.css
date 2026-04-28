@@ -1,0 +1,112 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background-attachment: fixed;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* HEADER PADRONIZADO */
+header {
+    width: 100%;
+    padding: 20px 0;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+}
+.container-header {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-info { text-align: left; }
+.header-info h1 { font-size: 1.5rem; margin: 0; color: white; }
+.subtitle { font-size: 0.85rem; opacity: 0.8; margin: 0; color: white; }
+.header-nav ul { display: flex; list-style: none; gap: 25px; }
+.header-nav a { color: white; text-decoration: none; font-weight: 500; }
+.header-nav a:hover { opacity: 0.7; }
+
+/* CONTAINER PRODUTOS */
+.container { max-width: 1100px; margin: 30px auto; padding: 0 20px; color: #333; }
+section { background: white; padding: 30px; border-radius: 12px; margin-bottom: 30px; box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+section h2 { color: #21054d; border-bottom: 2px solid #667eea; padding-bottom: 10px; margin-bottom: 20px; }
+
+/* FORMULÁRIO */
+.form-group { margin-bottom: 15px; display: flex; flex-direction: column; }
+.form-group label { font-weight: 600; margin-bottom: 5px; }
+.form-group input { padding: 10px; border: 1px solid #ccc; border-radius: 5px; }
+.form-buttons { display: flex; gap: 10px; }
+
+/* BOTÕES */
+.btn { padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; }
+.btn-primary { background: #3a54c6; color: white; }
+.btn-secondary { background: #e0e0e0; }
+.btn-success { background: #48bb78; color: white; }
+
+/* TABELA */
+table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+table th { background: #21054d; color: white; padding: 12px; text-align: left; }
+table td { padding: 12px; border-bottom: 1px solid #eee; }
+
+footer { text-align: center; padding: 20px; background: rgba(0,0,0,0.2); margin-top: auto; }
+
+@media (max-width: 768px) {
+    .container-header { flex-direction: column; gap: 15px; text-align: center; }
+    .header-info { text-align: center; }
+}
+
+/* ========================================
+   FOOTER GERAL PADRONIZADA
+   ======================================== */
+
+.footer-geral {
+    width: 100%;
+    padding: 30px 0;
+    background: rgba(0, 0, 0, 0.3); /* Fundo escuro sutil */
+    backdrop-filter: blur(5px);    /* Efeito de vidro */
+    color: white;
+    margin-top: auto;              /* Empurra para o fim em layouts flex */
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.container-footer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+    text-align: center;
+}
+
+.footer-content p {
+    font-size: 0.95rem;
+    margin: 5px 0;
+    opacity: 0.9;
+}
+
+.footer-dev {
+    font-size: 0.8rem !important;
+    opacity: 0.6 !important;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Garante que o body se comporte como coluna para a footer fixar embaixo */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Ajuste para telas menores */
+@media (max-width: 600px) {
+    .footer-geral {
+        padding: 20px 0;
+    }
+    .footer-content p {
+        font-size: 0.85rem;
+    }
+}
