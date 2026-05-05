@@ -4,8 +4,8 @@ const path = require('path');
 const cors = require('cors'); // IMPORTANTE: Adicionado para permitir conexão com o React
 const app = express(); 
 
-// Pela tua imagem anterior, o teu .env está a usar a porta 2000
-const PORT = process.env.PORT || 2000; 
+// Pela tua imagem anterior, o teu .env está a usar a porta 3000
+const PORT = process.env.PORT || 3000; 
 
 // CONFIGURAÇÕES OBRIGATÓRIAS
 app.use(cors()); // IMPORTANTE: Liberta o acesso para o React (resolve erro de CORS)

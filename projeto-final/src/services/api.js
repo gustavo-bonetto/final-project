@@ -1,2 +1,2 @@
-const API_URL = "http://localhost:2000/produtos";
+const API_URL = "http://localhost:3000/produtos";
 export default API_URL;
